@@ -1,6 +1,11 @@
 # CleanCppProject
 Notes and thoughts for a clean and simple C++ project workflow.
 
+- [Git](#git)
+- [Project Template](#project-template)
+  - [CMake](#cmake)
+  - [Doxygen](#doxygen)
+
 ## Git
 
 Use a version control system.
