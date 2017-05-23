@@ -1,12 +1,22 @@
+% Clean Cpp Project
+% chriamue
+% May, 2017
+
+---
+
 # CleanCppProject
+
 Notes and thoughts for a clean and simple C++ project workflow.
 
 - [Git](#git)
 - [Project Template](#project-template)
   - [CMake](#cmake)
   - [Doxygen](#doxygen)
+- [Markdown](markdown)
 
-## Git
+---
+
+# Git
 
 Use a version control system.
 
@@ -14,7 +24,9 @@ Use a version control system.
 
 For repositories on my own server I prefer [Gitlab](https://hub.docker.com/r/gitlab/gitlab-ce/) in a Docker container.
 
-## Project Template
+---
+
+# Project Template
 
 [https://github.com/cginternals/cmake-init](https://github.com/cginternals/cmake-init) provides an easy to use cmake template project.
 
@@ -26,7 +38,9 @@ git clone https://github.com/cginternals/cmake-init.git CleanProject
 
 Then change files in CleanProject as it is described in the ADAPT file.
 
-### CMake
+---
+
+## CMake
 
 [CMake](https://cmake.org/) allows you to easily build your code on different platforms
 
@@ -43,7 +57,30 @@ cmake --build .
 cmake .. -G "Visual Studio 14 Win64"
 ```
 
-### Doxygen
+---
+
+## Doxygen
 
 [Doxygen](http://doxygen.org) will create documentation of your API based on comments within projects source code.
 
+---
+
+# Markdown
+
+Files like README.md written in markdown can simply be viewed in [Github](https://github.com/) and also in [Gitlab](https://about.gitlab.com/).
+
+---
+
+## Pandoc
+
+Markdown files can easily converted to PDF format using pandoc.
+
+```bash
+pandoc README.md -o README.pdf
+```
+
+You can also convert them to beamer slides.
+
+```bash
+pandoc -t beamer README.md -o slides.pdf
+```
